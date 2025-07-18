@@ -6,6 +6,71 @@
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
+
+    char letras[11] = {' ', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+
+    int tabuleiro[10][10] = {
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    };
+
+    printf("*** TABULEIRO SEM NAVIOS ***\n\n");
+
+    for(int j = 0; j <= 10; j++) {
+        printf("%c\t", letras[j]);
+    }
+
+    printf("\n\n");
+
+    for(int i = 0; i <=9 ; i++) {
+        printf("%d\t", i + 1);
+        for(int j = 0; j <= 9; j++) {
+            printf("%d\t", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+    
+    printf("*** TABULEIRO COM NAVIOS ***\n\n");
+
+    // Posicionando os navios:
+
+    for(int i = 3; i <= 5; i++) { // Navio Horizontal: Linha 5 e colunas D, E, F
+        tabuleiro[4][i] = 3; // linha hardcoded
+    }
+
+    for(int i = 7; i <= 9; i++) { // Navio Vertical: Coluna A e linhas 8 a 10
+        tabuleiro[i][0] = 3; // coluna hardcoded
+    }
+
+    for(int j = 0; j <= 10; j++) {
+        printf("%c\t", letras[j]);
+    }
+
+    printf("\n\n");
+
+    for(int i = 0; i <=9 ; i++) {
+        printf("%d\t", i + 1);
+        for(int j = 0; j <= 9; j++) {
+            printf("%d\t", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n");
+
+
+
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
