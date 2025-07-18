@@ -45,12 +45,28 @@ int main() {
 
     // Posicionando os navios:
 
-    for(int i = 3; i <= 5; i++) { // Navio Horizontal: Linha 5 e colunas D, E, F
-        tabuleiro[4][i] = 3; // linha hardcoded
+    for(int i = 7; i <= 9; i++) { // Navio Horizontal: Linha 5 e colunas D, E, F
+        tabuleiro[6][i] = 3; // linha hardcoded
     }
 
-    for(int i = 7; i <= 9; i++) { // Navio Vertical: Coluna A e linhas 8 a 10
+    for(int i = 3; i <= 5; i++) { // Navio Vertical: Coluna A e linhas 8 a 10
         tabuleiro[i][0] = 3; // coluna hardcoded
+    }
+
+    for(int i = 0; i <= 2; i++) { // Navio Diagonal Principal
+        for(int j = 0; j <= 2; j++) {
+            if(i == j) {
+                tabuleiro[i][j] = 3;
+            }
+        }
+    }
+
+    for(int i = 7; i <= 9; i++) { // Navio Diagonal Secundaria
+        for(int j = 0; j <= 2; j++) {
+            if(i + j == 9) {
+                tabuleiro[i][j] = 3;
+            }
+        }
     }
 
     for(int j = 0; j <= 10; j++) {
